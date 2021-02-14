@@ -1,6 +1,6 @@
-import "tailwindcss/tailwind.css";
 import { Auth0Provider } from "@auth0/auth0-react";
 import { useEffect, useState } from "react";
+import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
   const [redirectUri, setRedirectUri] = useState();
