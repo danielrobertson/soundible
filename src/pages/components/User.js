@@ -7,6 +7,8 @@ const User = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const isPhotoBroken = (url) => {
+    if (!url) return;
+
     const img = new Image();
     img.src = url;
     img.onerror = () => {
@@ -31,10 +33,10 @@ const User = () => {
         onClick={() => setShowMenu(!showMenu)}
         className="mt-1 mr-1 rounded-full"
       >
-        {isPhotoBroken(user.picture) ? (
+        {isPhotoBroken(user?.picture) ? (
           <FallbackUserAvatar user={user} />
         ) : (
-          <img className="m-3 h-8 rounded-full" src={user.picture} />
+          <img className="m-3 h-8 rounded-full" src={user?.picture} />
         )}
       </button>
       <div className="relative">
