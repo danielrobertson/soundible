@@ -31,7 +31,7 @@ export default function Account() {
           <div className="md:flex ml-2">
             <Link href="/">
               <a>
-                <div className="flex items-center mt-2">
+                <div className="flex items-center mt-2 p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -42,7 +42,7 @@ export default function Account() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
                     />
                   </svg>
                   <span className="ml-2">Back to sounds</span>
