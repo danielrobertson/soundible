@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Account() {
   const {
@@ -25,13 +26,31 @@ export default function Account() {
   return (
     <>
       {isAuthenticated && (
-        <div>
+        <div className="h-screen">
           <Header />
-          <div className="flex">
-            <Nav />
+          <div className="md:flex ml-2">
+            <Link href="/">
+              <a>
+                <div className="flex items-center mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+                    />
+                  </svg>
+                  <span className="ml-2">Back to sounds</span>
+                </div>
+              </a>
+            </Link>
             <div>
-              <div className="mt-5 ml-7">Account Page</div>
-              <div className="mt-5 ml-7">{user?.name}</div>
+              <div className="mt-8 ml-20 text-2xl">Hello, {user?.name}</div>
             </div>
           </div>
         </div>
