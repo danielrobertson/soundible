@@ -8,11 +8,17 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html className="h-full">
         <Head />
-        <body className="bg-dark text-gray-200">
-          <Main />
+        <body className="grid grid-rows-1 bg-dark text-gray-200 h-full min-h-full">
+          <Main className="" />
           <NextScript />
+          <footer className="flex justify-center h-8 row-start-2 row-end-3 text-xs font-semibold text-gray-400">
+            Made by &nbsp;
+            <a href="https://danielrobertson.me" className="underline">
+              @danielrobertson
+            </a>
+          </footer>
         </body>
       </Html>
     );
