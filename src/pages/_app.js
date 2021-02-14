@@ -7,6 +7,10 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     setRedirectUri(window.location.origin);
+    console.log(
+      "🚀 ~ file: _app.js ~ line 10 ~ useEffect ~ window.location.origin",
+      window.location.origin
+    );
   });
 
   return (
