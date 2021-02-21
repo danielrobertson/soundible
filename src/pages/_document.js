@@ -9,7 +9,14 @@ class MyDocument extends Document {
   render() {
     return (
       <Html className="h-full">
-        <Head />
+        <Head>
+          <script
+            async
+            defer
+            data-website-id="3c16f463-8553-419c-8262-288515c9e263"
+            src="https://soundible-analytics.vercel.app/umami.js"
+          ></script>
+        </Head>
         <body className="grid grid-rows-1 bg-dark text-gray-200 h-full min-h-full">
           <Main className="" />
           <NextScript />
